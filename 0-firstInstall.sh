@@ -1,8 +1,14 @@
 #!/bin/bash
-#nerdctl -n k8s.io pull nginx:1.23.1-alpine
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-echo '----------'
-echo $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)
-echo '----------'
-kubectl apply -f ingress
+kubectl create namespace longhorn-system
+kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.3.2/deploy/longhorn.yaml
+
+#- mode: system
+#  script: |
+#    #!/bin/sh
+#    set -o errexit
+#    apk add open-iscsi
+#    rc-update add iscsid
+#    rc-service iscsid start
+#    apk add nfs-utils
+#    rc-update add nfsmount
+#    rc-service nfsmount start
