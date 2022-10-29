@@ -21,25 +21,16 @@ Install longhorn.io on rancher desktop
 ## How to make it working :
 
 1. update "/Users/<username>/Library/Application Support/rancher-desktop/lima/0/lima.yaml" file, by adding at the end of its "provision" section (then, restart rancher desktop):
->- mode: system
->
->  script: |
->
->    #!/bin/sh
->
->    set -o errexit
->
->    apk add open-iscsi
->
->    rc-update add iscsid
->
->    rc-service iscsid start
->
->    apk add nfs-utils
->
->    rc-update add nfsmount
->
->    rc-service nfsmount start
+        - mode: system
+          script: |
+            #!/bin/sh
+            set -o errexit
+            apk add open-iscsi
+            rc-update add iscsid
+            rc-service iscsid start
+            apk add nfs-utils
+            rc-update add nfsmount
+            rc-service nfsmount start
 
 2. run "./0-firstInstall.sh"
 
