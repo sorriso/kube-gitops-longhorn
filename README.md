@@ -1,12 +1,10 @@
-# kube-gitops-longhorn
-Install longhorn.io on rancher desktop
-
-you like this work ?
+# you like this work ?
 
 [!["You like it ?"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sorriso)
 
+# kube-gitops-longhorn
 
-Kubernetes yaml configuration files for vault using docker hub image
+Install longhorn.io on rancher desktop
 
 > DISCLAMER : This stuff is just for helping people to understand how things work, it is NOT for production use, I do NOT provide any support on it
 
