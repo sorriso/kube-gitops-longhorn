@@ -44,7 +44,7 @@ if [[ "$UPDATE" == 'YES' ]]; then
   helm pull stable/longhorn --untar
   CURRENT=$(ls longhorn-*.* | sed 's/longhorn-//g' | sed 's/.tgz//g')
   echo $CURRENT > ./current.txt
-  logDate=$(date '+%Y-%m-%d')
+  logDate=$(date '%Y-%m-%d')
   echo "$logDate : update to $CURRENT" >> ./history.log
 else
   echo "$logDate : No update needed" >> ./history.log
