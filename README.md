@@ -21,6 +21,7 @@ Install longhorn.io on rancher desktop
 ## How to make it working :
 
 1. update "/Users/<username>/Library/Application Support/rancher-desktop/lima/0/lima.yaml" file, by adding at the end of its "provision" section (then, restart rancher desktop):
+
         - mode: system
           script: |
             #!/bin/sh
