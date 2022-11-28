@@ -14,8 +14,6 @@ Install longhorn.io on rancher desktop
 
    - "containerd" selected as main command tool
 
-   - the "traefik" installed by default desactivated
-
    - kubernetes v1.4.27 selected / installed
 
 ## How to make it working :
@@ -37,6 +35,8 @@ Install longhorn.io on rancher desktop
 
 ## OPTIONAL :
 
-the script "./1-update.sh" has been created in order to be used in an "gitOps" approach within ArgoCD
+the script "./1-update.sh" has been created in order to be used in an "gitOps" approach within ArgoCD (or equivalent)
+
+the script check if a new version is available and update it locally accordingly
 
 the folder "longhorn" contains the "up-to-date" deployment helm files (to be tuned before run) that can be used by ArgoCD to deploy

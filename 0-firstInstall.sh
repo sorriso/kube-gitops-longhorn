@@ -1,15 +1,6 @@
 #!/bin/bash
+# LIMA_HOME="$HOME/Library/Application Support/rancher-desktop/lima" "/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/lima/bin/limactl" shell 0
 kubectl create namespace longhorn-system
 sleep 2
 kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.3.2/deploy/longhorn.yaml
-
-#- mode: system
-#  script: |
-#    #!/bin/sh
-#    set -o errexit
-#    apk add open-iscsi
-#    rc-update add iscsid
-#    rc-service iscsid start
-#    apk add nfs-utils
-#    rc-update add nfsmount
-#    rc-service nfsmount start
+kubectl apply -f common
